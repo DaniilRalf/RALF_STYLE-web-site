@@ -1,5 +1,6 @@
-'use strict'
+'use strict';
 window.addEventListener('DOMContentLoaded', ()=> {
+
 
     // burger \ menu----------------------------
     const burger = document.querySelector('.header-burger'),
@@ -24,11 +25,28 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
 
 
+    // tovar------------------------------------
+    const tovar = document.querySelectorAll('.tovar-hudi-block');
+
+    tovar.forEach(item => {
+        item.addEventListener('mouseenter', () =>{
+            let tovarUrl = item.childNodes[1].childNodes[0].src;
+            let tovarUrlNew = `${tovarUrl.substring(0, tovarUrl.length - 4)}` + `-on.png`;
+            item.childNodes[1].childNodes[0].src = tovarUrlNew;
+        });
+        item.addEventListener('mouseleave', () =>{
+            let tovarUrl = item.childNodes[1].childNodes[0].src;
+            let tovarUrlNew = `${tovarUrl.substring(0, tovarUrl.length - 7)}` + `.png`;
+            item.childNodes[1].childNodes[0].src = tovarUrlNew;
+        });
+
+
+        
+    });
 
 
 
 
 
-    
 
 });

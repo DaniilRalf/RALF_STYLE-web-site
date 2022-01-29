@@ -47,7 +47,7 @@ body{
 
     position: absolute;
 
-    background-color: #D6C7C5;
+    background-color: #C4C4C4;
     border-radius: 3px;
 }
 .header-burger-item:nth-of-type(1){top: 15px;}
@@ -68,15 +68,12 @@ body{
     
     display: block;
 }
-
-
 /* MENU------------------------------ */
 .menu-block{
     width: 100%;
-    height: 300px;
+    height: 0px;
 
-
-    background-color: #D6C7C5;
+    background-color: #C4C4C4;
     border-radius: 30px;
     overflow: hidden;
 
@@ -87,6 +84,31 @@ body{
 
 
 
+/* TOVAR------------------------------------------------------------------------- */
+.tovar-hudi{
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.tovar-hudi-block{
+    height: 600px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+.tovar-hudi-item-img{
+    width: 100%;
+}
+
+
+
 /* ANIMATION==================================================================== */
 
 /* burger \ menu--------------------------- */
@@ -94,7 +116,7 @@ body{
     height: 2px;
     width: 100px;
     position: absolute;
-    background-color: #D6C7C5;
+    background-color: #C4C4C4;
     border-radius: 3px;
 
     transform: translate(0, 32px) rotate(45deg);
@@ -108,7 +130,7 @@ body{
     height: 2px;
     width: 100px;
     position: absolute;
-    background-color: #D6C7C5;
+    background-color: #C4C4C4;
     border-radius: 3px;
 
     transform: translate(0, -32px) rotate(-45deg);
@@ -120,9 +142,9 @@ body{
 }
 .menu-block-close{
     width: 100%;
-    height: 0px;
+    height: 300px;
     
-    background-color: #D6C7C5;
+    background-color: #C4C4C4;
     border-radius: 30px;
 
     transition-property: all;
