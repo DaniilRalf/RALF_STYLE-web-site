@@ -26,7 +26,7 @@ body{
 
 
 
-
+/* HEADER--------------------------------------------------------------------- */
 .header-block{
     height: 130px;
 
@@ -34,19 +34,26 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+/* burger------------------------ */
 .header-burger{
     height: 100px;
     width: 100px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    position: relative;
 }
 .header-burger-item{
     height: 2px;
+    width: 100px;
+
+    position: absolute;
 
     background-color: #D6C7C5;
+    border-radius: 3px;
 }
+.header-burger-item:nth-of-type(1){top: 15px;}
+.header-burger-item:nth-of-type(2){top: 48px;}
+.header-burger-item:nth-of-type(3){top: 80px;}
+/* navigaion----------------------- */
 .header-navigation-list{
     display: flex;
     justify-content: space-between;
@@ -55,8 +62,69 @@ body{
 .header-navigation-item:not(:last-child){
     margin-right: 70px;
 }
+/* logo----------------------------- */
 .header-logo{
     height: 100px;
     
     display: block;
+}
+
+
+/* MENU------------------------------ */
+.menu-block{
+    width: 100%;
+    height: 300px;
+
+
+    background-color: #D6C7C5;
+    border-radius: 30px;
+    overflow: hidden;
+
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+
+
+
+/* ANIMATION==================================================================== */
+
+/* burger \ menu--------------------------- */
+.first-line{
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    background-color: #D6C7C5;
+    border-radius: 3px;
+
+    transform: translate(0, 32px) rotate(45deg);
+    transform-origin: bottom center;
+}
+.second-line{ 
+    opacity: 0;
+    position: absolute;
+}
+.third-line{
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    background-color: #D6C7C5;
+    border-radius: 3px;
+
+    transform: translate(0, -32px) rotate(-45deg);
+    transform-origin: bottom center;
+}
+.header-burger-item{
+    transition-property: all;
+    transition-duration: 400ms;
+}
+.menu-block-close{
+    width: 100%;
+    height: 0px;
+    
+    background-color: #D6C7C5;
+    border-radius: 30px;
+
+    transition-property: all;
+    transition-duration: 400ms;
 }
