@@ -39,9 +39,6 @@ window.addEventListener('DOMContentLoaded', ()=> {
             let tovarUrlNew = `${tovarUrl.substring(0, tovarUrl.length - 7)}` + `.png`;
             item.childNodes[1].childNodes[0].src = tovarUrlNew;
         });
-
-
-        
     });
 
 
