@@ -54,9 +54,104 @@ window.addEventListener('DOMContentLoaded', ()=> {
             // console.log(el);
             el.classList.toggle('faq__description-open');
 
+            let close = element.childNodes[1].childNodes[3].childNodes[1];
+            // console.log(close);
+            close.classList.toggle('faq-block-item__icon-left__close');
             
         });
     });
 
+
+
+
+
+
+    // DINAMIC===============================================================
+    const dinamic = document.querySelector('.dinamic');
+    const dinamicBack = document.querySelectorAll('.dinamic-back');
+    const btn_close = document.querySelector('.dinamic-back-close');
+
+    const contact__btn = document.querySelectorAll('.contact__btn');
+    const delivery__btn = document.querySelectorAll('.delivery__btn');
+    const politics__btn = document.querySelector('.politics__btn');
+    const return__btn = document.querySelector('.return__btn');
+
+    const contact = document.querySelector('.contact');
+    const delivery = document.querySelector('.delivery');
+    const politics = document.querySelector('.politics');
+    const return_ = document.querySelector('.return'); 
+
+
+    const closed = function () {
+        new Promise((resolve)=>{
+            dinamic.style.opacity = "0";
+            dinamicBack.forEach(element=>{
+                element.style.opacity = "0";
+            });
+            // dinamicBack.style.opacity = "0";
+            setTimeout(()=>{
+                resolve();
+            }, 700);
+        }).then(()=>{
+            dinamic.style.display = "none";
+            dinamicBack.forEach(element=>{
+                element.style.display = "none";
+            });
+            // dinamicBack.style.display = "none";
+        });
+    };
+    dinamic.addEventListener('click', ()=>{
+        closed();
+    });
+    btn_close.addEventListener('click', ()=>{
+        closed();
+    });
+
+
+
+    const open = function(one, second){
+        new Promise((resolve)=>{
+            one.style.display = "flex";
+            second.style.display = "block";
+            setTimeout(()=>{
+                resolve();
+            }, 0);
+        }).then(()=>{
+            one.style.opacity = "100%";
+            second.style.opacity = "100%";
+        });
+    };
+
+
+
+    contact__btn.forEach(element=> {
+        element.addEventListener('click', ()=>{
+            open(dinamic, contact);
+        });
+    });
+    delivery__btn.forEach(element=> {
+        element.addEventListener('click', ()=>{
+            open(dinamic, delivery);
+        });
+    });
+    politics__btn.addEventListener('click', ()=>{
+        open(dinamic, politics);
+    });
+    return__btn.addEventListener('click', ()=>{
+        open(dinamic, return_);
+    });
+
+
+
+
+
+
+    // TOVAR===============================================================
+
+
+
+
+
+    
 
 });
